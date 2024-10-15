@@ -1,0 +1,237 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  h1, h2, h3{
+    line-height: 1;
+  }
+  
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+:root {
+    --Moderate--Violet:  hsl(263, 55%, 52%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Dark-Blackish-Blue: hsl(219, 19%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    --Light-Gray: hsl(0, 0%, 81%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+    --Graduate: hsla(0, 0%, 100%, 0.5);
+    --Quotes: hsla(0, 0%, 100%, .5);
+
+    --ff-Base: 'Barlow Semi Condensed', serif;
+    --fw-Regular: 500;
+    --fw-Bold: 600;
+    
+}
+
+body{
+    display: grid;
+    font-family: var(--ff-Base);
+    background-color: var(--Light-Grayish-Blue);
+    place-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.Testomonial__Card {
+    display: grid;
+    
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    text-align: left;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.Testomonial--Daniel {
+    display: grid;
+    background-color: var(--Moderate--Violet);
+    color: var(--White);
+    background-image: url("/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-position-x: 12rem;
+    
+    
+}
+
+.Testomonial--Jonathan {
+
+    background-color: var(--Dark-Grayish-Blue);
+    color: var(--White);
+}
+
+.Testomonial--Jeanette {
+    background-color: var(--White);
+}
+
+.Testomonial--Patrick {
+    background-color: var(--Dark-Blackish-Blue);
+    color: var(--White);
+}
+
+.Testomonial--Kira {
+    background-color: var(--White);
+    margin-bottom: 3rem;
+}
+
+.Testomonial__Bold {
+    font-weight: var(--fw-Bold);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.Testomonial__Verified {
+    opacity: .5;
+    margin-top: 0;
+}
+
+.Testomonial__Quotes {
+    opacity: .5;
+}
+
+.Round__Image{
+    border-radius: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+
+}
+
+
+
+.Testomonial__Name{
+    margin-bottom: -.5rem;
+}
+
+.Testomonial__Main_Group {
+
+  display: flex;
+  align-items: start;
+}
+
+@media (max-width: 1439px) {
+  .Testomonial__Card {
+    display: grid;
+    width: 23rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    text-align: left;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+  .Testomonial--Daniel {
+    display: grid;
+    background-color: var(--Moderate--Violet);
+    color: var(--White);
+    background-image: url("/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-position-x: 12rem;
+    
+    
+}
+
+}
+
+@media (min-width: 1440px) {
+
+  body {
+    display: grid;
+  }
+
+  main {
+    display: grid; 
+    justify-content: center;
+    align-items: center;   
+    margin-top: 15rem;
+
+  }
+
+  .Testomonial {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+    justify-items: stretch;
+    align-items: stretch;
+    margin-top: 2rem auto;
+    max-width: 1200px;
+  }
+
+  .Testomonial--Daniel {
+    grid-column: 1 / span 2;
+    background-position: top right;
+    background-position-x: 85%;
+    
+  }
+
+}
+
+.Testomonial--Jeanette {
+  grid-column: 1 /2;
+  
+}
+
+.Testomonial--Patrick {
+
+  grid-column: 2 / span 2;
+}
+
+.Testomonial--Kira {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 2;
+  
+
+}
