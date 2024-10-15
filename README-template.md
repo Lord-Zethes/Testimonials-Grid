@@ -24,6 +24,7 @@ Add a screenshot here once ready
 
 Links
 Solution URL: https://github.com/Lord-Zethes/Testimonials-Grid
+Live site: https://testimonials-grid-qwsshdka8-lord-zethes-projects.vercel.app/
 
 My process
 Built with
